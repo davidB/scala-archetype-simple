@@ -39,7 +39,7 @@
       <plugin>
         <artifactId>maven-invoker-plugin</artifactId>
         <configuration>
-          <debug>true</debug>
+          <debug>false</debug>
           <projectsDirectory>${project.build.directory}/sample</projectsDirectory>
           <pom>${project.build.directory}/sample/pom.xml</pom>
         </configuration>
