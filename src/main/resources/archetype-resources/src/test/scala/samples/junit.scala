@@ -1,4 +1,4 @@
-package ${package}
+package samples
 
 import org.junit._
 import Assert._
