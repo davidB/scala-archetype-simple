@@ -52,12 +52,10 @@
       <url>http://nexus-direct.scala-tools.org/content/repositories/snapshots</url>
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
-    <site>
-      <!-- <id>scala-tools.org</id> <url>dav:http://dav.scala-tools.org/mvnsites</url> dav protocol isn't optimized for site-deploy (very long for api) So * deploy on local file system * manually : archive 
-        tar -cjvf .... * manually : put the archives to http://dav.scala-tools.org/mvnsites * manually (request admin) : unarchives on remote server <id>local</id> <url>file://${user.home}/.m2/mvnsites/${project.groupId}/</url> -->
+    <!--site>
       <id>scala-tools.org</id>
-      <url>dav:http://nexus-direct.scala-tools.org/content/sites/mvnsites/maven-scala-plugin</url>
-    </site>
+      <url>dav:http://nexus-direct.scala-tools.org/content/sites/mvnsites/${project.artifactId}</url>
+    </site-->
   </distributionManagement>
 
   <developers>
