@@ -24,13 +24,13 @@
 
   <scm>
     <connection>scm:git:git://github.com/davidB/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:davidB/${project.artifactId}.git</developerConnection>
-    <url>http://github.com/davidB/${project.artifactId}/</url>
+    <!--developerConnection>scm:git:git@github.com:davidB/${project.artifactId}.git</developerConnection-->
+    <url>git@github.com:davidB/${project.artifactId}.git</url>
   </scm>
 
   <issueManagement>
     <system>github</system>
-    <url>http://github.com/davidB/${project.artifactId}/issues#issue/</url>
+    <url>http://github.com/davidB/${project.artifactId}/issues</url>
   </issueManagement>
 
   <mailingLists>
