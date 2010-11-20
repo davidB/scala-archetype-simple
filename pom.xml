@@ -1,15 +1,71 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.scala-tools</groupId>
-    <artifactId>scala-tools-parent</artifactId>
-    <version>1.6</version>
-  </parent>
   <groupId>org.scala-tools.archetypes</groupId>
   <artifactId>scala-archetype-simple</artifactId>
   <version>1.3-SNAPSHOT</version>
   <name>Archetype - scala-archetype-simple</name>
+  
+  <url>http://scala-tools.org/mvnsites/${project.artifactId}</url>
+  <!--url>http://github.com/davidB/${project.artifactId}</url -->
+  <description>The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.</description>
+  <inceptionYear>2010</inceptionYear>
+  <organization>
+    <name>Scala Tools</name>
+    <url>http://scala-tools.org/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>the Apache License, ASL Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/davidB/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:davidB/${project.artifactId}.git</developerConnection>
+    <url>http://github.com/davidB/${project.artifactId}/</url>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>http://github.com/davidB/${project.artifactId}/issues#issue/</url>
+  </issueManagement>
+
+  <mailingLists>
+    <mailingList>
+      <name>maven-and-scala</name>
+      <archive>http://groups.google.com/group/maven-and-scala</archive>
+      <post>http://groups.google.com/group/maven-and-scala</post>
+    </mailingList>
+  </mailingLists>
+
+  <distributionManagement>
+    <repository>
+      <id>scala-tools.org</id>
+      <url>http://nexus-direct.scala-tools.org/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>scala-tools.org</id>
+      <url>http://nexus-direct.scala-tools.org/content/repositories/snapshots</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+    <site>
+      <!-- <id>scala-tools.org</id> <url>dav:http://dav.scala-tools.org/mvnsites</url> dav protocol isn't optimized for site-deploy (very long for api) So * deploy on local file system * manually : archive 
+        tar -cjvf .... * manually : put the archives to http://dav.scala-tools.org/mvnsites * manually (request admin) : unarchives on remote server <id>local</id> <url>file://${user.home}/.m2/mvnsites/${project.groupId}/</url> -->
+      <id>scala-tools.org</id>
+      <url>dav:http://nexus-direct.scala-tools.org/content/sites/mvnsites/maven-scala-plugin</url>
+    </site>
+  </distributionManagement>
+
+  <developers>
+    <developer>
+      <name>David Bernard</name>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+  
   <properties>
     <maven.test.skip>true</maven.test.skip>
     <maven.compiler.source>1.5</maven.compiler.source>
