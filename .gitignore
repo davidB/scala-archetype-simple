@@ -13,6 +13,10 @@ syntax: glob
 .project
 .manager
 
+# idea conf files
+*.iml
+.idea
+
 # building
 target
 build
