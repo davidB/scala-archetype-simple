@@ -1,37 +1,39 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.scala-tools.archetypes</groupId>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>net.alchim31.maven</groupId>
   <artifactId>scala-archetype-simple</artifactId>
   <version>1.4-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>Archetype - scala-archetype-simple</name>
-  <url>http://scala-tools.org/mvnsites/${project.artifactId}</url>
-  <!--url>http://github.com/davidB/${project.artifactId}</url -->
+  <url>http://github.com/davidB/${project.artifactId}</url>
+  <inceptionYear>2012</inceptionYear>
   <description>The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.</description>
-  <inceptionYear>2010</inceptionYear>
-  <organization>
-    <name>Scala Tools</name>
-    <url>http://scala-tools.org/</url>
-  </organization>
+
   <licenses>
     <license>
-      <name>the Apache License, ASL Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <name>Public domain (Unlicense)</name>
+      <url>http://unlicense.org/</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
 
   <scm>
     <connection>scm:git:git://github.com/davidB/${project.artifactId}.git</connection>
-    <!--developerConnection>scm:git:git@github.com:davidB/${project.artifactId}.git</developerConnection-->
-    <url>git@github.com:davidB/${project.artifactId}.git</url>
+    <developerConnection>scm:git:git@github.com:davidB/${project.artifactId}.git</developerConnection>
+    <url>http://github.com/davidB/${project.artifactId}/</url>
   </scm>
 
   <issueManagement>
     <system>github</system>
-    <url>http://github.com/davidB/${project.artifactId}/issues</url>
+    <url>http://github.com/davidB/${project.artifactId}/issues#issue/</url>
   </issueManagement>
 
   <mailingLists>
@@ -42,22 +44,6 @@
     </mailingList>
   </mailingLists>
 
-  <distributionManagement>
-    <repository>
-      <id>scala-tools.org</id>
-      <url>http://nexus-direct.scala-tools.org/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>scala-tools.org</id>
-      <url>http://nexus-direct.scala-tools.org/content/repositories/snapshots</url>
-      <uniqueVersion>false</uniqueVersion>
-    </snapshotRepository>
-    <!--site>
-      <id>scala-tools.org</id>
-      <url>dav:http://nexus-direct.scala-tools.org/content/sites/mvnsites/${project.artifactId}</url>
-    </site-->
-  </distributionManagement>
-
   <developers>
     <developer>
       <name>David Bernard</name>
@@ -67,17 +53,23 @@
 
   <properties>
     <maven.test.skip>true</maven.test.skip>
-    <maven.compiler.source>1.5</maven.compiler.source>
-    <maven.compiler.target>1.5</maven.compiler.target>
+    <maven.version>3.0</maven.version>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
     <encoding>UTF-8</encoding>
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
   </properties>
+
+  <prerequisites>
+    <maven>${maven.version}</maven>
+  </prerequisites>
 
   <build>
     <extensions>
       <extension>
         <groupId>org.apache.maven.archetype</groupId>
         <artifactId>archetype-packaging</artifactId>
-        <version>2.0</version>
+        <version>2.2</version>
       </extension>
     </extensions>
 
@@ -85,7 +77,7 @@
       <plugins>
         <plugin>
           <artifactId>maven-archetype-plugin</artifactId>
-          <version>2.0</version>
+          <version>2.2</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -93,6 +85,7 @@
     <plugins>
       <plugin>
         <artifactId>maven-invoker-plugin</artifactId>
+        <version>1.8</version>
         <executions>
           <execution>
             <id>integration-test</id>

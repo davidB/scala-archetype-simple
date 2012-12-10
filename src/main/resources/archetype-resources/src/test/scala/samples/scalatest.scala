@@ -84,23 +84,26 @@ A Map
 - should only contain keys and values that were added to it
 - should report its size as the number of key/value pairs it contains
 */
-import org.scalatest.Spec
-import org.scalatest.matchers.MustMatchers
+import org.scalatest.FunSpec
+import scala.collection.mutable.Stack
 
-class MapSpec extends Spec with MustMatchers {
+class ExampleSpec extends FunSpec {
 
-  describe("A Map") {
+  describe("A Stack") {
 
-    it("should only contain keys and values that were added to it") {
-      Map("ho" -> 12) must (not contain key ("hi") and not contain value (13))
-      Map("hi" -> 13) must (contain key ("hi") and contain value (13))
+    it("should pop values in last-in-first-out order") {
+      val stack = new Stack[Int]
+      stack.push(1)
+      stack.push(2)
+      assert(stack.pop() === 2)
+      assert(stack.pop() === 1)
     }
 
-    it("should report its size as the number of key/value pairs it contains") {
-      Map() must have size (0)
-      Map("ho" -> 12) must have size (1)
-      Map("hi" -> 13, "ho" -> 12) must have size (2)
+    it("should throw NoSuchElementException if an empty stack is popped") {
+      val emptyStack = new Stack[Int]
+      intercept[NoSuchElementException] {
+        emptyStack.pop()
+      }
     }
   }
 }
-

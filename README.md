@@ -2,17 +2,22 @@
 
 * interactive Mode (select scala-archetype-simple and response to questions) :
 
-      mvn archetype:generate -DarchetypeCatalog=http://nexus.scala-tools.org/content/groups/public
+      mvn archetype:generate
 
 * non interactive / batch (change info in the last line) :
 
       mvn archetype:generate -B \
-        -DarchetypeRepository=http://scala-tools.org/repo-releases/ \
-        -DarchetypeGroupId=org.scala-tools.archetypes -DarchetypeArtifactId=scala-archetype-simple -DarchetypeVersion=1.3 \
+        -DarchetypeGroupId=net.alchim31.maven -DarchetypeArtifactId=scala-archetype-simple -DarchetypeVersion=1.4 \
         -DgroupId=com.company -DartifactId=project -Dversion=0.1-SNAPSHOT -Dpackage=com.company
 
 # Changes:
 
+## 1.4
+
+* move to sonatype for hosting
+* change groupId to net.alchim31.maven
+* upgrade version of scala to 2.9.2, version of JUnit, Specs(2) and ScalaTest
+        
 ## 1.3
 
 * upgrade to scala 2.8.0 (as default)
