@@ -2,13 +2,14 @@
 
 * interactive Mode (select scala-archetype-simple and response to questions) :
 
-      mvn archetype:generate
+        mvn archetype:generate
 
 * non interactive / batch (change info in the last line) :
 
-      mvn archetype:generate -B \
-        -DarchetypeGroupId=net.alchim31.maven -DarchetypeArtifactId=scala-archetype-simple -DarchetypeVersion=1.4 \
-        -DgroupId=com.company -DartifactId=project -Dversion=0.1-SNAPSHOT -Dpackage=com.company
+        mvn archetype:generate -B \
+          -DarchetypeGroupId=net.alchim31.maven -DarchetypeArtifactId=scala-archetype-simple -DarchetypeVersion=1.4 \
+          -DgroupId=com.company -DartifactId=project -Dversion=0.1-SNAPSHOT -Dpackage=com.company
+
 
 # Changes:
 
