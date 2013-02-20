@@ -13,6 +13,11 @@
 
 # Changes:
 
+## 1.5
+
+* upgrade of scala 2.10.0 
+* upgrade version of Specs(2), ScalaTest, Surefire, scala-maven-plugin
+
 ## 1.4
 
 * move to sonatype for hosting
