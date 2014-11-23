@@ -15,12 +15,19 @@
     </license>
   </licenses>
 
+  <repositories>
+   <repository>
+     <id>Scalaz Bintray Repo</id>
+     <url>http://dl.bintray.com/scalaz/releases/</url>
+   </repository>
+  </repositories>
+  
   <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
     <encoding>UTF-8</encoding>
     <scala.tools.version>2.10</scala.tools.version>
-    <scala.version>2.10.0</scala.version>
+    <scala.version>2.10.4</scala.version>
   </properties>
 
   <dependencies>
@@ -38,15 +45,39 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.scalaz.stream</groupId>
+      <artifactId>scalaz-stream_${scala.tools.version}</artifactId>
+      <version>0.6</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scalaz</groupId>
+      <artifactId>scalaz-core_${scala.tools.version}</artifactId>
+      <version>7.1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scalaz</groupId>
+      <artifactId>scalaz-concurrent_${scala.tools.version}</artifactId>
+      <version>7.1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.specs2</groupId>
       <artifactId>specs2_${scala.tools.version}</artifactId>
-      <version>1.13</version>
+      <version>2.4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scalamacros</groupId>
+      <artifactId>quasiquotes_${scala.tools.version}</artifactId>
+      <version>2.0.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.tools.version}</artifactId>
-      <version>2.0.M6-SNAP8</version>
+      <version>2.2.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
