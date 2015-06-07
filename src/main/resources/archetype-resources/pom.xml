@@ -6,7 +6,7 @@
   <version>${version}</version>
   <name>$name</name>
   <description>My wonderfull scala app</description>
-  <inceptionYear>2010</inceptionYear>
+  <inceptionYear>2015</inceptionYear>
   <licenses>
     <license>
       <name>My License</name>
@@ -19,8 +19,8 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
     <encoding>UTF-8</encoding>
-    <scala.tools.version>2.11</scala.tools.version>
     <scala.version>2.11.5</scala.version>
+    <scala.compat.version>2.11</scala.compat.version>
   </properties>
 
   <dependencies>
@@ -39,13 +39,13 @@
     </dependency>
     <dependency>
       <groupId>org.specs2</groupId>
-      <artifactId>specs2-core_${scala.tools.version}</artifactId>
+      <artifactId>specs2-core_${scala.compat.version}</artifactId>
       <version>2.4.16</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scala.tools.version}</artifactId>
+      <artifactId>scalatest_${scala.compat.version}</artifactId>
       <version>2.2.4</version>
       <scope>test</scope>
     </dependency>
