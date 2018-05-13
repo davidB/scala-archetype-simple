@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/davidB/scala-archetype-simple.svg?branch=master)](https://travis-ci.com/davidB/scala-archetype-simple)
+
 # usage from cli :
 
 * interactive Mode (select scala-archetype-simple and response to questions) :
