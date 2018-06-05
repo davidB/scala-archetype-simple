@@ -25,23 +25,23 @@ http://www.scalatest.org/
 One way to use ScalaTest is to help make JUnit or TestNG tests more
 clear and concise. Here's an example:
 */
-import scala.collection.mutable.Stack
+import scala.collection._
 import org.scalatest.Assertions
 import org.junit.Test
 
 class StackSuite extends Assertions {
 
   @Test def stackShouldPopValuesIinLastInFirstOutOrder() {
-    val stack = new Stack[Int]
+    val stack = new mutable.ArrayStack[Int]
     stack.push(1)
     stack.push(2)
     assert(stack.pop() === 2)
     assert(stack.pop() === 1)
   }
 
-  @Test def stackShouldThrowNoSuchElementExceptionIfAnEmptyStackIsPopped() {
-    val emptyStack = new Stack[String]
-    intercept[NoSuchElementException] {
+  @Test def stackShouldThrowRuntimeExceptionIfAnEmptyArrayStackIsPopped() {
+    val emptyStack = new mutable.ArrayStack[String]
+    intercept[RuntimeException] {
       emptyStack.pop()
     }
   }
@@ -85,23 +85,22 @@ A Map
 - should report its size as the number of key/value pairs it contains
 */
 import org.scalatest.FunSpec
-import scala.collection.mutable.Stack
 
 class ExampleSpec extends FunSpec {
 
-  describe("A Stack") {
+  describe("An ArrayStack") {
 
     it("should pop values in last-in-first-out order") {
-      val stack = new Stack[Int]
+      val stack = new mutable.ArrayStack[Int]
       stack.push(1)
       stack.push(2)
       assert(stack.pop() === 2)
       assert(stack.pop() === 1)
     }
 
-    it("should throw NoSuchElementException if an empty stack is popped") {
-      val emptyStack = new Stack[Int]
-      intercept[NoSuchElementException] {
+    it("should throw RuntimeException if an empty array stack is popped") {
+      val stack = new mutable.ArrayStack[Int]
+      intercept[RuntimeException] {
         emptyStack.pop()
       }
     }
