@@ -99,7 +99,7 @@ class ExampleSpec extends FunSpec {
     }
 
     it("should throw RuntimeException if an empty array stack is popped") {
-      val stack = new mutable.ArrayStack[Int]
+      val emptyStack = new mutable.ArrayStack[Int]
       intercept[RuntimeException] {
         emptyStack.pop()
       }
