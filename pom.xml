@@ -9,7 +9,7 @@
 
   <groupId>net.alchim31.maven</groupId>
   <artifactId>scala-archetype-simple</artifactId>
-  <version>1.7-SNAPSHOT</version>
+  <version>1.7</version>
   <packaging>maven-archetype</packaging>
 
   <name>Archetype - scala-archetype-simple</name>
