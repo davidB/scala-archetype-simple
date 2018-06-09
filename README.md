@@ -20,17 +20,22 @@
 
 # Changes:
 
-## 1.6
+## 1.7 (2018-06-09)
+
+* upgrade version of scala 2.12.6, scalatest 3.0.5, specs2 4.2.0, junit 4.12
+* upgrade build process (ci, plugins,...)
+
+## 1.6 (2015-06-07)
 
 * change license for Unlicense to CC0 (always Public Domain)
 * upgrade version of scala, librairies, plugins
 
-## 1.5
+## 1.5 (2013-02-23)
 
 * upgrade of scala 2.10.0
 * upgrade version of Specs(2), ScalaTest, Surefire, scala-maven-plugin
 
-## 1.4
+## 1.4 (2012-12-10)
 
 * move to sonatype for hosting
 * change groupId to net.alchim31.maven
